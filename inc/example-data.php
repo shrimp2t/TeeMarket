@@ -117,7 +117,7 @@ function example_create_cat( $cats, $parent_id = 0 ) {
 
 example_create_cat( $categories );
 $product = new Product();
-$faker = Faker\Factory::create();
+$faker = \Faker\Factory::create();
 $product->name = sprintf( 'Product %s ', $faker->name );
 // $product->name = 'My Product one';
 $product->price = 125;
@@ -128,7 +128,7 @@ foreach ( $created_cats as $cid ) {
 	$product->categories()->attach( $cid );
 }
 
-// Set product options
+// Set product options.
 $attr_options = array();
 foreach ( $product_options as $option_name => $option_values ) {
 	$option = new Product\VariantOption();

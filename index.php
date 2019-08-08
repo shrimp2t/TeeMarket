@@ -23,6 +23,8 @@ class TeeMarket {
 			require_once self::$path . '/inc/example-data.php';
 		}
 
+		require_once self::$path . '/inc/router.php';
+
 	}
 }
 

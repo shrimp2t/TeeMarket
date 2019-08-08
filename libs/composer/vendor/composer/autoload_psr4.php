@@ -7,9 +7,13 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'WeDevs\\ORM\\' => array($vendorDir . '/tareq1988/wp-eloquent/src'),
+    'Symfony\\Polyfill\\Php70\\' => array($vendorDir . '/symfony/polyfill-php70'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Contracts\\Translation\\' => array($vendorDir . '/symfony/translation-contracts'),
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
+    'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
+    'Rareloop\\WordPress\\Router\\' => array($vendorDir . '/rareloop/wp-router/src'),
+    'Rareloop\\Router\\' => array($vendorDir . '/rareloop/router/src'),
     'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Illuminate\\Support\\' => array($vendorDir . '/illuminate/support'),

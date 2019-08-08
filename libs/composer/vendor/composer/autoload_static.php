@@ -9,6 +9,7 @@ class ComposerStaticInitca95fc54edb014fdc422781a86a4d511
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
+        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -18,9 +19,16 @@ class ComposerStaticInitca95fc54edb014fdc422781a86a4d511
         ),
         'S' => 
         array (
+            'Symfony\\Polyfill\\Php70\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Component\\Translation\\' => 30,
+            'Symfony\\Component\\HttpFoundation\\' => 33,
+        ),
+        'R' => 
+        array (
+            'Rareloop\\WordPress\\Router\\' => 26,
+            'Rareloop\\Router\\' => 16,
         ),
         'P' => 
         array (
@@ -54,6 +62,10 @@ class ComposerStaticInitca95fc54edb014fdc422781a86a4d511
         array (
             0 => __DIR__ . '/..' . '/tareq1988/wp-eloquent/src',
         ),
+        'Symfony\\Polyfill\\Php70\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php70',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -65,6 +77,18 @@ class ComposerStaticInitca95fc54edb014fdc422781a86a4d511
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+        'Symfony\\Component\\HttpFoundation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-foundation',
+        ),
+        'Rareloop\\WordPress\\Router\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rareloop/wp-router/src',
+        ),
+        'Rareloop\\Router\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rareloop/router/src',
         ),
         'Psr\\SimpleCache\\' => 
         array (
@@ -108,11 +132,23 @@ class ComposerStaticInitca95fc54edb014fdc422781a86a4d511
         ),
     );
 
+    public static $classMap = array (
+        'AltoRouter' => __DIR__ . '/..' . '/altorouter/altorouter/AltoRouter.php',
+        'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
+        'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+        'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+        'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
+        'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
+        'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
+        'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitca95fc54edb014fdc422781a86a4d511::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitca95fc54edb014fdc422781a86a4d511::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitca95fc54edb014fdc422781a86a4d511::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -1,6 +1,7 @@
 {
     "require": {
 		"tareq1988/wp-eloquent": "dev-master",
-        "fzaninotto/faker": "^1.8"
+        "fzaninotto/faker": "^1.8",
+        "rareloop/wp-router": "^1.0"
     }
 }
