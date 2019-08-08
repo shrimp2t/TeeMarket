@@ -1,5 +1,6 @@
 {
     "require": {
-        "tareq1988/wp-eloquent": "dev-master"
+		"tareq1988/wp-eloquent": "dev-master",
+        "fzaninotto/faker": "^1.8"
     }
 }

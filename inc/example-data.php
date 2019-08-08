@@ -117,8 +117,8 @@ function example_create_cat( $cats, $parent_id = 0 ) {
 
 example_create_cat( $categories );
 $product = new Product();
-$uid = \uniqid( 'test-' );
-$product->name = sprintf( 'Product %s ', $uid );
+$faker = Faker\Factory::create();
+$product->name = sprintf( 'Product %s ', $faker->name );
 // $product->name = 'My Product one';
 $product->price = 125;
 $product->save();
