@@ -25,6 +25,17 @@ class TeeMarket {
 
 		require_once self::$path . '/inc/router.php';
 
+		if ( function_exists( 'WC' ) ) {
+			require_once self::$path . '/inc/wc/class-cart.php';
+			require_once self::$path . '/inc/wc/class-product.php';
+			add_action(
+				'wp',
+				function() {
+					WC\Cart::add_to_cart();
+				}
+			);
+		}
+
 	}
 }
 
@@ -32,5 +43,6 @@ add_action(
 	'plugins_loaded',
 	function() {
 		new TeeMarket();
-	}
+	},
+	999
 );
